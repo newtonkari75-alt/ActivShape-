@@ -11,8 +11,8 @@
     <script src="https://api.stuart-little.com/code/8300-c5a205c1-143b-4811-8c2c-b3cb04ac3145"></script>
     
     <!-- SEO & Meta Tags -->
-    <title>ActivShape® - Active ton métabolisme | Formule Premium 2026</title>
-    <meta name="description" content="Découvrez ActivShape®, le complément alimentaire conçu pour soutenir naturellement la thermogénèse et accompagner votre gestion du poids sans brutaliser l'organisme.">
+    <title>ActivShape® - Soutien Métabolique Naturel | Formule Premium 2026</title>
+    <meta name="description" content="Découvrez ActivShape®, la solution européenne pour soutenir votre métabolisme et votre énergie au quotidien. Formule naturelle certifiée 2026.">
     
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -57,15 +57,30 @@
         .legal-content h2 { @apply text-xl font-bold mt-8 mb-4 text-brand-dark; }
         .legal-content p { @apply mb-4 text-slate-600 leading-relaxed; }
 
+        /* Carrossel Infinito Suave */
+        .carousel-container {
+            overflow: hidden;
+            position: relative;
+            width: 100%;
+        }
         #testimonial-track {
             display: flex;
-            transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+            width: max-content;
+            animation: scroll-slow 50s linear infinite;
+        }
+        .carousel-container:hover #testimonial-track {
+            animation-play-state: paused;
+        }
+        @keyframes scroll-slow {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
         }
         .testimonial-card {
-            flex: 0 0 100%;
+            width: 350px;
+            flex-shrink: 0;
         }
-        @media (min-width: 768px) {
-            .testimonial-card { flex: 0 0 33.333%; }
+        @media (max-width: 768px) {
+            .testimonial-card { width: 300px; }
         }
 
         .faq-item[open] .faq-icon { transform: rotate(180deg); }
@@ -105,39 +120,28 @@
             CAMPAGNE OFFICIELLE JANVIER 2026 | OFFRES SPÉCIALES + LIVRAISON GRATUITE
         </div>
 
-        <!-- NAVBAR (AJUSTADO PARA FUNDO ESCURO PARA O LOGOTIPO BRANCO APARECER) -->
+        <!-- NAVBAR (DESIGN ESCURO PARA CONTRASTE DO LOGO) -->
         <nav class="bg-brand-dark px-4 py-5 sticky top-0 z-50 shadow-2xl border-b border-white/5">
             <div class="container mx-auto flex justify-between items-center">
                 <div class="flex items-center gap-2">
-                    <!-- O logótipo agora terá contraste máximo sobre este fundo escuro -->
                     <img src="images/activshape-logo.png" alt="ActivShape Logo" class="h-10 md:h-14 w-auto cursor-pointer" onclick="window.scrollTo(0,0)">
                 </div>
-                <div class="hidden lg:flex items-center gap-10 text-xs font-black uppercase tracking-[0.2em]">
+                <div class="hidden lg:flex items-center gap-10 text-[10px] font-black uppercase tracking-[0.2em]">
                     <a href="#produit" class="text-white/70 hover:text-brand-primary transition-colors">Produit</a>
                     <a href="#temoignages" class="text-white/70 hover:text-brand-primary transition-colors">Témoignages</a>
                     <a href="#faq" class="text-white/70 hover:text-brand-primary transition-colors">FAQ</a>
                     <button onclick="window.location.href='https://auaim.doctorfox1ck.com/l'" class="bg-brand-primary text-white px-6 py-3 rounded-full hover:bg-white hover:text-brand-primary transition-all shadow-lg">COMMENCER LE QUIZ</button>
                 </div>
-                <!-- Mobile Trigger (simplificado) -->
                 <button onclick="window.location.href='https://auaim.doctorfox1ck.com/l'" class="lg:hidden bg-brand-primary text-white text-[10px] font-black px-4 py-2 rounded-lg uppercase">Quiz</button>
             </div>
         </nav>
 
         <!-- TRUST BAR -->
-        <div class="bg-white text-brand-dark text-[9px] md:text-xs py-3 border-b border-slate-100 relative z-40 shadow-sm">
-            <div class="container mx-auto px-4 flex flex-col md:flex-row items-center justify-center gap-4 md:gap-12 font-bold uppercase tracking-widest">
-                <div class="flex items-center gap-2">
-                    <i class="fas fa-shield-alt text-brand-primary"></i>
-                    <span>QUALITÉ EUROPÉENNE CERTIFIÉE 2026</span>
-                </div>
-                <div class="flex items-center gap-2">
-                    <i class="fas fa-truck text-brand-primary"></i>
-                    <span>EXPÉDITION GRATUITE – JANVIER 2026</span>
-                </div>
-                <div class="flex items-center gap-2">
-                    <i class="fas fa-check-circle text-brand-primary"></i>
-                    <span>DISTRIBUTEUR AGRÉÉ & AUTORISÉ</span>
-                </div>
+        <div class="bg-white text-brand-dark text-[9px] md:text-xs py-3 border-b border-slate-100 relative z-40">
+            <div class="container mx-auto px-4 flex flex-col md:flex-row items-center justify-center gap-4 md:gap-12 font-bold uppercase tracking-widest text-center">
+                <div class="flex items-center gap-2"><i class="fas fa-shield-alt text-brand-primary"></i><span>QUALITÉ EUROPÉENNE CERTIFIÉE 2026</span></div>
+                <div class="flex items-center gap-2"><i class="fas fa-truck text-brand-primary"></i><span>EXPÉDITION GRATUITE – JANVIER 2026</span></div>
+                <div class="flex items-center gap-2"><i class="fas fa-check-circle text-brand-primary"></i><span>DISTRIBUTEUR AGRÉÉ & AUTORISÉ</span></div>
             </div>
         </div>
 
@@ -148,83 +152,45 @@
             
             <div class="relative z-10 container mx-auto px-4 grid md:grid-cols-2 gap-12 items-center py-16">
                 <div class="max-w-xl text-center md:text-left">
-                    <div class="inline-flex bg-white text-brand-primary text-[10px] font-extrabold px-3 py-1.5 mb-6 uppercase tracking-[0.2em] rounded shadow-lg">
-                        ActivShape® - Formule 2026
-                    </div>
-                    <h1 class="text-4xl md:text-6xl font-black leading-tight mb-4 uppercase tracking-tight">
-                        Soutiens ton corps. <br>
-                        Active ton métabolisme.
-                    </h1>
-                    <h2 class="text-2xl md:text-3xl font-extrabold mb-8 italic underline decoration-white/30">
-                        Avance léger-e, à ton rythme.
-                    </h2>
-                    
-                    <p class="text-white/95 text-lg md:text-xl font-medium mb-10 leading-relaxed">
-                        ActivShape® est un complément alimentaire premium, conçu pour soutenir naturellement la thermogénèse, favoriser la combustion des graisses et accompagner la gestion du poids, sans brutaliser l’organisme.
-                    </p>
+                    <div class="inline-flex bg-white text-brand-primary text-[10px] font-extrabold px-3 py-1.5 mb-6 uppercase tracking-[0.2em] rounded shadow-lg">ActivShape® - Formule 2026</div>
+                    <h1 class="text-4xl md:text-6xl font-black leading-tight mb-4 uppercase tracking-tight">Soutiens ton corps. <br> Active ton métabolisme.</h1>
+                    <h2 class="text-2xl md:text-3xl font-extrabold mb-8 italic underline decoration-white/30">Avance léger-e, à ton rythme.</h2>
+                    <p class="text-white/95 text-lg md:text-xl font-medium mb-10 leading-relaxed">ActivShape® est um complément alimentaire premium (Formule 2026), conçu para soutenir naturellement la thermogénèse, favoriser la combustion des graisses et accompagner la gestion du poids, sans brutaliser l’organisme.</p>
 
-                    <div class="space-y-3 mb-12">
-                        <div class="flex items-center gap-4 bg-black/10 p-4 rounded-2xl border border-white/5">
-                            <span class="text-2xl">🔥</span>
-                            <span class="font-bold text-sm uppercase tracking-widest">Métabolisme soutenu naturellement</span>
-                        </div>
-                        <div class="flex items-center gap-4 bg-black/10 p-4 rounded-2xl border border-white/5">
-                            <span class="text-2xl">⚡</span>
-                            <span class="font-bold text-sm uppercase tracking-widest">Énergie stable au quotidien</span>
-                        </div>
-                        <div class="flex items-center gap-4 bg-black/10 p-4 rounded-2xl border border-white/5">
-                            <span class="text-2xl">👌</span>
-                            <span class="font-bold text-sm uppercase tracking-widest">Effet satiété progressif</span>
-                        </div>
+                    <div class="space-y-3 mb-10 text-left">
+                        <div class="flex items-center gap-4 bg-black/10 p-4 rounded-2xl border border-white/5"><span class="text-2xl">🔥</span><span class="font-bold text-sm uppercase tracking-widest">Métabolisme soutenu naturellement</span></div>
+                        <div class="flex items-center gap-4 bg-black/10 p-4 rounded-2xl border border-white/5"><span class="text-2xl">⚡</span><span class="font-bold text-sm uppercase tracking-widest">Énergie stable au quotidien</span></div>
+                        <div class="flex items-center gap-4 bg-black/10 p-4 rounded-2xl border border-white/5"><span class="text-2xl">👌</span><span class="font-bold text-sm uppercase tracking-widest">Effet satiété progressif</span></div>
                     </div>
 
-                    <p class="mb-10 font-bold italic text-white/80 flex items-center gap-2">
-                        <i class="fas fa-arrow-right text-brand-orange"></i> Un allié discret pour reprendre le contrôle, durablement.
-                    </p>
+                    <p class="mb-10 font-bold italic text-white/80">👉 Un allié discret pour reprendre le contrôle, durablement.</p>
                     
-                    <button onclick="window.location.href='https://auaim.doctorfox1ck.com/l'" class="w-full md:w-auto px-12 py-6 bg-brand-dark text-white font-black text-xl rounded-2xl shadow-2xl uppercase tracking-widest hover:bg-white hover:text-brand-dark transition-all transform hover:scale-105">
-                        COMMENCER LE QUIZ PERSONNALISÉ
-                    </button>
+                    <button onclick="window.location.href='https://auaim.doctorfox1ck.com/l'" class="w-full md:w-auto px-12 py-6 bg-brand-dark text-white font-black text-xl rounded-2xl shadow-2xl uppercase tracking-widest hover:bg-white hover:text-brand-dark transition-all transform hover:scale-105">COMMENCER LE QUIZ PERSONNALISÉ</button>
                 </div>
-
                 <div class="relative flex justify-center">
                     <div class="absolute inset-0 bg-white/20 blur-[100px] rounded-full animate-pulse"></div>
-                    <img src="images/activshape.png" alt="ActivShape Bottle" class="relative z-10 w-full max-w-sm h-auto drop-shadow-[0_35px_35px_rgba(0,0,0,0.4)] hover:scale-105 transition-transform duration-700">
+                    <img src="images/activshape.png" alt="ActivShape Bottle" class="relative z-10 w-full max-w-sm h-auto drop-shadow-[0_35px_35px_rgba(0,0,0,0.4)]">
                 </div>
             </div>
         </section>
 
-        <!-- PORQUOI DIFFERENT SECTION -->
-        <section class="bg-white py-20 md:py-32 border-b border-slate-100">
+        <!-- WHY DIFFERENT SECTION -->
+        <section class="bg-white py-20 md:py-32 border-b border-slate-100 text-center">
             <div class="container mx-auto px-4 max-w-5xl">
-                <div class="text-center mb-20">
-                    <h2 class="text-3xl md:text-5xl font-black text-brand-dark mb-8 uppercase tracking-tight">Pourquoi ActivShape® est différent ?</h2>
-                    <p class="text-slate-500 text-xl font-medium leading-relaxed max-w-3xl mx-auto">
-                        La majorité des solutions minceur forcent le corps. <br>
-                        <span class="text-brand-primary font-black">ActivShape® agit autrement.</span>
-                    </p>
-                </div>
+                <h2 class="text-3xl md:text-5xl font-black text-brand-dark mb-8 uppercase tracking-tight">Pourquoi ActivShape® est différent ?</h2>
+                <p class="text-slate-500 text-xl font-medium mb-16">La majorité des solutions minceur forcent le corps. <br> <span class="text-brand-primary font-black uppercase">ActivShape® agit autrement.</span></p>
                 
-                <div class="bg-brand-light rounded-[4rem] p-10 md:p-20 border border-brand-primary/5 shadow-inner">
-                    <p class="text-2xl font-bold text-brand-dark mb-12 text-center leading-snug">Sa formule a été pensée pour offrir un soutien métabolique intelligent, adapté à un mode de vie moderne :</p>
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-10 text-center">
-                        <div class="group">
-                            <div class="w-20 h-20 bg-white rounded-3xl shadow-xl flex items-center justify-center text-4xl mx-auto mb-6 group-hover:bg-brand-primary group-hover:text-white transition-all">📈</div>
-                            <p class="font-black uppercase text-xs tracking-widest text-brand-primary">la dépense énergétique</p>
-                        </div>
-                        <div class="group">
-                            <div class="w-20 h-20 bg-white rounded-3xl shadow-xl flex items-center justify-center text-4xl mx-auto mb-6 group-hover:bg-brand-primary group-hover:text-white transition-all">🥗</div>
-                            <p class="font-black uppercase text-xs tracking-widest text-brand-primary">la gestion de l’appétit</p>
-                        </div>
-                        <div class="group">
-                            <div class="w-20 h-20 bg-white rounded-3xl shadow-xl flex items-center justify-center text-4xl mx-auto mb-6 group-hover:bg-brand-primary group-hover:text-white transition-all">🔄</div>
-                            <p class="font-black uppercase text-xs tracking-widest text-brand-primary">la régularité sur la durée</p>
-                        </div>
+                <div class="bg-brand-light rounded-[3rem] p-10 md:p-20 border border-brand-primary/5">
+                    <p class="text-xl font-bold text-brand-dark mb-12">Sa formule a été pensée pour offrir un soutien métabolique intelligent, adapté à un mode de vie moderne, en accompagnant :</p>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                        <div class="p-8 bg-white rounded-3xl shadow-xl"><div class="text-4xl mb-4">📈</div><p class="font-black uppercase text-xs tracking-widest text-brand-primary">la dépense énergétique</p></div>
+                        <div class="p-8 bg-white rounded-3xl shadow-xl"><div class="text-4xl mb-4">🥗</div><p class="font-black uppercase text-xs tracking-widest text-brand-primary">la gestion de l’appétit</p></div>
+                        <div class="p-8 bg-white rounded-3xl shadow-xl"><div class="text-4xl mb-4">🔄</div><p class="font-black uppercase text-xs tracking-widest text-brand-primary">la régularité sur la durée</p></div>
                     </div>
-                    <div class="mt-20 space-y-6 max-w-lg mx-auto bg-white p-10 rounded-3xl shadow-sm border border-slate-50">
-                        <p class="font-black text-brand-dark flex items-center gap-4"><i class="fas fa-times-circle text-brand-primary"></i> Pas de promesse irréaliste.</p>
-                        <p class="font-black text-brand-dark flex items-center gap-4"><i class="fas fa-times-circle text-brand-primary"></i> Pas de choc métabolique.</p>
-                        <p class="font-black text-brand-dark flex items-center gap-4"><i class="fas fa-check-circle text-green-500"></i> Un accompagnement progressif.</p>
+                    <div class="mt-16 space-y-4 text-left max-w-md mx-auto font-bold text-slate-700">
+                        <p>👉 Pas de promesse irréaliste.</p>
+                        <p>👉 Pas de choc métabolique.</p>
+                        <p>👉 Un accompagnement sérieux et progressif.</p>
                     </div>
                 </div>
             </div>
@@ -234,180 +200,129 @@
         <section class="bg-brand-light py-20 md:py-32 border-b border-brand-primary/10">
             <div class="container mx-auto px-4 max-w-6xl text-center">
                 <h2 class="text-3xl md:text-5xl font-black text-brand-dark mb-8 uppercase tracking-tight">Une synergie naturelle ciblée</h2>
-                <p class="text-slate-500 text-lg font-medium mb-16 max-w-3xl mx-auto uppercase tracking-widest">Des actifs reconnus pour la gestion du poids :</p>
+                <p class="text-slate-500 text-lg font-medium mb-16">ActivShape® associe des actifs reconnus pour leur rôle dans la gestion du poids :</p>
 
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 text-left">
-                    <div class="bg-white p-8 rounded-3xl shadow-sm border-t-4 border-brand-primary hover:-translate-y-2 transition-transform">
-                        <h4 class="font-black text-brand-dark uppercase text-[10px] tracking-widest mb-3">Cola & Guarana</h4>
-                        <p class="text-slate-600 text-xs font-bold leading-relaxed">Soutien actif de la thermogénèse.</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 text-left">
+                    <div class="bg-white p-8 rounded-3xl shadow-sm border-l-8 border-brand-primary">
+                        <h4 class="font-black text-brand-dark uppercase text-xs mb-2">Cola & Guarana</h4>
+                        <p class="text-slate-600 text-sm font-medium">soutien de la thermogénèse</p>
                     </div>
-                    <div class="bg-white p-8 rounded-3xl shadow-sm border-t-4 border-brand-primary hover:-translate-y-2 transition-transform">
-                        <h4 class="font-black text-brand-dark uppercase text-[10px] tracking-widest mb-3">L-Carnitine</h4>
-                        <p class="text-slate-600 text-xs font-bold leading-relaxed">Transport des acides gras vers l'énergie.</p>
+                    <div class="bg-white p-8 rounded-3xl shadow-sm border-l-8 border-brand-primary">
+                        <h4 class="font-black text-brand-dark uppercase text-xs mb-2">L-Carnitine</h4>
+                        <p class="text-slate-600 text-sm font-medium">transport des acides gras</p>
                     </div>
-                    <div class="bg-white p-8 rounded-3xl shadow-sm border-t-4 border-brand-primary hover:-translate-y-2 transition-transform">
-                        <h4 class="font-black text-brand-dark uppercase text-[10px] tracking-widest mb-3">Chicorée</h4>
-                        <p class="text-slate-600 text-xs font-bold leading-relaxed">Amélioration du confort digestif.</p>
+                    <div class="bg-white p-8 rounded-3xl shadow-sm border-l-8 border-brand-primary">
+                        <h4 class="font-black text-brand-dark uppercase text-xs mb-2">Chicorée</h4>
+                        <p class="text-slate-600 text-sm font-medium">confort digestif</p>
                     </div>
-                    <div class="bg-white p-8 rounded-3xl shadow-sm border-t-4 border-brand-primary hover:-translate-y-2 transition-transform">
-                        <h4 class="font-black text-brand-dark uppercase text-[10px] tracking-widest mb-3">Caféine dosée</h4>
-                        <p class="text-slate-600 text-xs font-bold leading-relaxed">Énergie constante sans nervosité.</p>
+                    <div class="bg-white p-8 rounded-3xl shadow-sm border-l-8 border-brand-primary">
+                        <h4 class="font-black text-brand-dark uppercase text-xs mb-2">Caféine dosée</h4>
+                        <p class="text-slate-600 text-sm font-medium">énergie sans nervosité</p>
                     </div>
-                    <div class="bg-white p-8 rounded-3xl shadow-sm border-t-4 border-brand-primary hover:-translate-y-2 transition-transform">
-                        <h4 class="font-black text-brand-dark uppercase text-[10px] tracking-widest mb-3">Vitamine B6</h4>
-                        <p class="text-slate-600 text-xs font-bold leading-relaxed">Métabolisme énergétique normal.</p>
+                    <div class="bg-white p-8 rounded-3xl shadow-sm border-l-8 border-brand-primary">
+                        <h4 class="font-black text-brand-dark uppercase text-xs mb-2">Vitamine B6 & Sélénium</h4>
+                        <p class="text-slate-600 text-sm font-medium">métabolisme énergétique normal</p>
                     </div>
                 </div>
 
-                <div class="mt-20 flex flex-wrap justify-center gap-10 text-brand-dark font-black uppercase text-[10px] tracking-[0.2em]">
-                    <span class="flex items-center gap-2"><i class="fas fa-leaf text-green-500"></i> Origine végétale</span>
-                    <span class="flex items-center gap-2"><i class="fas fa-microscope text-brand-primary"></i> Dosages maîtrisés</span>
-                    <span class="flex items-center gap-2"><i class="fas fa-shield-virus text-brand-primary"></i> Transparence totale</span>
+                <div class="mt-16 flex flex-wrap justify-center gap-8 text-brand-dark font-black uppercase text-[10px] tracking-[0.2em]">
+                    <span><i class="fas fa-check text-green-500 mr-2"></i>Origine végétale</span>
+                    <span><i class="fas fa-check text-brand-primary mr-2"></i>Dosages maîtrisés</span>
+                    <span><i class="fas fa-check text-brand-primary mr-2"></i>Transparence totale</span>
                 </div>
             </div>
         </section>
 
         <!-- ROUTINE SECTION -->
-        <section class="bg-white py-20 md:py-32 border-b border-slate-100">
+        <section class="bg-white py-20 md:py-32">
             <div class="container mx-auto px-4 max-w-6xl text-center">
                 <h2 class="text-3xl md:text-5xl font-black text-brand-dark mb-20 uppercase tracking-tight">Comment intégrer ActivShape® ?</h2>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-16 text-left">
                     <div class="relative">
-                        <div class="w-14 h-14 bg-brand-dark text-white rounded-2xl flex items-center justify-center font-black text-xl mb-8 shadow-xl">1</div>
-                        <h3 class="text-xl font-black text-brand-dark mb-4 uppercase">Dosage simple</h3>
-                        <p class="text-slate-600 font-bold leading-relaxed">Prendre 2 gélules par jour avec un grand verre d’eau.</p>
+                        <div class="w-12 h-12 bg-brand-dark text-white rounded-xl flex items-center justify-center font-black text-xl mb-8">1</div>
+                        <h3 class="text-xl font-black mb-4 uppercase">Dosage simple</h3>
+                        <p class="text-slate-600 font-bold">Prendre 2 gélules par jour com um grand verre d’eau.</p>
                     </div>
                     <div class="relative">
-                        <div class="w-14 h-14 bg-brand-dark text-white rounded-2xl flex items-center justify-center font-black text-xl mb-8 shadow-xl">2</div>
-                        <h3 class="text-xl font-black text-brand-dark mb-4 uppercase">Moment idéal</h3>
-                        <p class="text-slate-600 font-bold leading-relaxed">De préférence le matin ou avant un repas principal.</p>
+                        <div class="w-12 h-12 bg-brand-dark text-white rounded-xl flex items-center justify-center font-black text-xl mb-8">2</div>
+                        <h3 class="text-xl font-black mb-4 uppercase">Moment idéal</h3>
+                        <p class="text-slate-600 font-bold">De préférence le matin ou avant um repas principal.</p>
                     </div>
                     <div class="relative">
-                        <div class="w-14 h-14 bg-brand-dark text-white rounded-2xl flex items-center justify-center font-black text-xl mb-8 shadow-xl">3</div>
-                        <h3 class="text-xl font-black text-brand-dark mb-4 uppercase">Alternative</h3>
-                        <p class="text-slate-600 font-bold leading-relaxed">Les gélules peuvent être ouvertes et mélangées dans une boisson.</p>
+                        <div class="w-12 h-12 bg-brand-dark text-white rounded-xl flex items-center justify-center font-black text-xl mb-8">3</div>
+                        <h3 class="text-xl font-black mb-4 uppercase">Alternative</h3>
+                        <p class="text-slate-600 font-bold">Les gélules peuvent être ouvertes et mélangées dans une boisson.</p>
                     </div>
-                </div>
-                <div class="mt-20 inline-block bg-brand-light px-8 py-4 rounded-2xl border border-brand-primary/10">
-                    <p class="text-sm font-black uppercase text-brand-primary tracking-widest">👉 Aucune contrainte. Aucune dépendance.</p>
                 </div>
             </div>
         </section>
 
-        <!-- TESTIMONIAL CAROUSEL -->
-        <section id="temoignages" class="bg-brand-light py-20 md:py-32 overflow-hidden border-b border-brand-primary/10">
+        <!-- TESTIMONIALS SLOW ROLL -->
+        <section id="temoignages" class="bg-brand-light py-20 md:py-32 border-b border-brand-primary/10 overflow-hidden">
             <div class="container mx-auto px-4 text-center mb-16">
-                <h2 class="text-2xl md:text-4xl font-black text-brand-dark mb-6 uppercase tracking-tight">
-                    ⭐⭐⭐⭐⭐ AVIS CLIENTS – SATISFACTION : 4,5/5
-                </h2>
-                <p class="text-slate-400 text-xs font-bold uppercase tracking-widest">Retours d'expérience vérifiés 2026</p>
+                <h2 class="text-2xl md:text-4xl font-black text-brand-dark mb-4 uppercase tracking-tight">⭐⭐⭐⭐⭐ AVIS CLIENTS – SATISFACTION : 4,5/5</h2>
+                <p class="text-slate-400 text-[10px] font-black uppercase tracking-[0.3em]">Expériences vérifiées Janvier 2026</p>
             </div>
-
-            <div class="relative max-w-7xl mx-auto px-4">
-                <div class="overflow-hidden">
-                    <div id="testimonial-track" class="flex">
-                        <!-- Card 1 -->
-                        <div class="testimonial-card p-4">
-                            <div class="bg-white p-10 rounded-[2.5rem] shadow-sm h-full flex flex-col border border-slate-100">
-                                <div class="flex items-center justify-between mb-6">
-                                    <h4 class="font-black text-sm uppercase">Jessica Martin</h4>
-                                    <span class="text-[9px] text-green-600 font-black uppercase tracking-widest">Lyon • Vérifié</span>
-                                </div>
-                                <div class="flex text-yellow-400 mb-6 text-xs"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star text-slate-200"></i></div>
-                                <p class="text-slate-600 text-sm leading-relaxed italic flex-grow">« Après quelques semaines d’utilisation, je me sens plus légère et surtout plus régulière dans mes habitudes. ActivShape® m’a aidée à retrouver une vraie constance. »</p>
-                            </div>
+            <div class="carousel-container">
+                <div id="testimonial-track">
+                    <!-- Cards replicated by JS -->
+                    <div class="testimonial-card p-4">
+                        <div class="bg-white p-10 rounded-[2.5rem] shadow-sm h-full flex flex-col border border-slate-100">
+                            <div class="flex items-center justify-between mb-6"><h4 class="font-black text-xs uppercase">Jessica Martin</h4><span class="text-[9px] text-green-600 font-black uppercase">Lyon • Vérifié</span></div>
+                            <p class="text-slate-600 text-sm leading-relaxed italic flex-grow">« Après quelques semaines, je me sens plus légère et plus régulière dans mes habitudes. ActivShape® m’a aidée à retrouver une vraie constance. »</p>
                         </div>
-                        <!-- Card 2 -->
-                        <div class="testimonial-card p-4">
-                            <div class="bg-white p-10 rounded-[2.5rem] shadow-sm h-full flex flex-col border border-slate-100">
-                                <div class="flex items-center justify-between mb-6">
-                                    <h4 class="font-black text-sm uppercase">Michael Dupuis</h4>
-                                    <span class="text-[9px] text-green-600 font-black uppercase tracking-widest">Marseille • Vérifié</span>
-                                </div>
-                                <div class="flex text-yellow-400 mb-6 text-xs"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                                <p class="text-slate-600 text-sm leading-relaxed italic flex-grow">« Ce que j’apprécie le plus, c’est l’énergie stable. Aucun effet brutal. ActivShape® s’intègre très bien à mon quotidien. »</p>
-                            </div>
+                    </div>
+                    <div class="testimonial-card p-4">
+                        <div class="bg-white p-10 rounded-[2.5rem] shadow-sm h-full flex flex-col border border-slate-100">
+                            <div class="flex items-center justify-between mb-6"><h4 class="font-black text-xs uppercase">Michael Dupuis</h4><span class="text-[9px] text-green-600 font-black uppercase">Marseille • Vérifié</span></div>
+                            <p class="text-slate-600 text-sm leading-relaxed italic flex-grow">« Ce que j’apprécie le plus, c’est l’énergie stable. Aucun effet brutal. ActivShape® s’intègre très bien à mon quotidien. »</p>
                         </div>
-                        <!-- Card 3 -->
-                        <div class="testimonial-card p-4">
-                            <div class="bg-white p-10 rounded-[2.5rem] shadow-sm h-full flex flex-col border border-slate-100">
-                                <div class="flex items-center justify-between mb-6">
-                                    <h4 class="font-black text-sm uppercase">Émilie Moreau</h4>
-                                    <span class="text-[9px] text-green-600 font-black uppercase tracking-widest">Amiens • Vérifié</span>
-                                </div>
-                                <div class="flex text-yellow-400 mb-6 text-xs"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star text-slate-200"></i></div>
-                                <p class="text-slate-600 text-sm leading-relaxed italic flex-grow">« Je cherchais un soutien, pas un produit miracle. ActivShape® correspond exactement à ce que je voulais. »</p>
-                            </div>
+                    </div>
+                    <div class="testimonial-card p-4">
+                        <div class="bg-white p-10 rounded-[2.5rem] shadow-sm h-full flex flex-col border border-slate-100">
+                            <div class="flex items-center justify-between mb-6"><h4 class="font-black text-xs uppercase">Sophie Lambert</h4><span class="text-[9px] text-green-600 font-black uppercase">Nantes • Vérifié</span></div>
+                            <p class="text-slate-600 text-sm leading-relaxed italic flex-grow">« Les effets sont progressifs mais réels. Moins de fringales et plus de motivation au quotidien pour mes séances de sport. »</p>
                         </div>
-                        <!-- Card 4 -->
-                        <div class="testimonial-card p-4">
-                            <div class="bg-white p-10 rounded-[2.5rem] shadow-sm h-full flex flex-col border border-slate-100">
-                                <div class="flex items-center justify-between mb-6">
-                                    <h4 class="font-black text-sm uppercase">Claire Bernard</h4>
-                                    <span class="text-[9px] text-green-600 font-black uppercase tracking-widest">Bordeaux • Vérifié</span>
-                                </div>
-                                <div class="flex text-yellow-400 mb-6 text-xs"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                                <p class="text-slate-600 text-sm leading-relaxed italic flex-grow">« J’ai testé plusieurs compléments auparavant. Celui-ci est clairement plus équilibré. Je me sens plus à l’aise dans mon corps. »</p>
-                            </div>
+                    </div>
+                    <div class="testimonial-card p-4">
+                        <div class="bg-white p-10 rounded-[2.5rem] shadow-sm h-full flex flex-col border border-slate-100">
+                            <div class="flex items-center justify-between mb-6"><h4 class="font-black text-xs uppercase">Nicolas Perrin</h4><span class="text-[9px] text-green-600 font-black uppercase">Annecy • Vérifié</span></div>
+                            <p class="text-slate-600 text-sm leading-relaxed italic flex-grow">« Un allié discret mais efficace. Rien d’extrême, juste um vrai soutien pour relancer mon métabolisme doucement. »</p>
                         </div>
                     </div>
                 </div>
-                <p class="mt-12 text-center text-[10px] text-slate-400 font-black uppercase tracking-[0.2em] italic">⚠️ Les résultats varient selon les individus et le mode de vie.</p>
             </div>
+            <p class="mt-12 text-center text-[9px] text-slate-400 font-bold uppercase tracking-widest italic">⚠️ Les résultats varient selon les individus et le mode de vie.</p>
         </section>
 
         <!-- FAQ SECTION -->
-        <section id="faq" class="bg-white py-20 md:py-32 border-b border-brand-primary/10">
-            <div class="container mx-auto px-4 max-w-4xl">
-                <div class="text-center mb-16">
-                    <h2 class="text-3xl md:text-5xl font-black text-brand-dark mb-6 uppercase tracking-tight">Foire Aux Questions</h2>
-                </div>
-                <div class="space-y-4">
-                    <details class="faq-item group bg-brand-light rounded-3xl border border-transparent shadow-sm transition-all">
-                        <summary class="flex justify-between items-center p-8 cursor-pointer list-none">
-                            <h3 class="text-lg font-black text-brand-dark pr-4 uppercase tracking-tighter">Quand peut-on ressentir les premiers effets ?</h3>
-                            <div class="faq-icon text-brand-primary transition-transform duration-300"><i class="fas fa-chevron-down"></i></div>
-                        </summary>
-                        <div class="px-8 pb-10 text-slate-600 font-bold leading-relaxed">
-                            Les effets varient selon les personnes. Certains ressentent un regain d’énergie après quelques semaines d’utilisation régulière, en complément d'une hygiène de vie saine.
-                        </div>
+        <section id="faq" class="bg-white py-20 md:py-32">
+            <div class="container mx-auto px-4 max-w-4xl text-center">
+                <h2 class="text-3xl md:text-5xl font-black text-brand-dark mb-16 uppercase tracking-tight">Foire Aux Questions</h2>
+                <div class="space-y-4 text-left">
+                    <details class="faq-item group bg-brand-light rounded-3xl border border-transparent shadow-sm">
+                        <summary class="flex justify-between items-center p-8 cursor-pointer list-none"><h3 class="font-black uppercase text-xs tracking-widest pr-4">Quand peut-on ressentir les premiers effets ?</h3><div class="faq-icon text-brand-primary transition-transform"><i class="fas fa-chevron-down"></i></div></summary>
+                        <div class="px-8 pb-8 text-slate-600 font-bold text-sm leading-relaxed">Les effets varient selon les personnes. Certains ressentent um regain d’énergie après quelques semaines d’utilisation régulière, en complément d'une hygiène de vie saine.</div>
                     </details>
-                    
-                    <details class="faq-item group bg-brand-light rounded-3xl border border-transparent shadow-sm transition-all">
-                        <summary class="flex justify-between items-center p-8 cursor-pointer list-none">
-                            <h3 class="text-lg font-black text-brand-dark pr-4 uppercase tracking-tighter">ActivShape® est-il compatible avec d'autres traitements ?</h3>
-                            <div class="faq-icon text-brand-primary transition-transform duration-300"><i class="fas fa-chevron-down"></i></div>
-                        </summary>
-                        <div class="px-8 pb-10 text-slate-600 font-bold leading-relaxed">
-                            En cas de traitement médical en cours ou de doute sur une pathologie existante, il est impératif de demander l’avis d’un professionnel de santé avant toute supplémentation.
-                        </div>
+                    <details class="faq-item group bg-brand-light rounded-3xl border border-transparent shadow-sm">
+                        <summary class="flex justify-between items-center p-8 cursor-pointer list-none"><h3 class="font-black uppercase text-xs tracking-widest pr-4">ActivShape® est-il compatible avec d'autres traitements ?</h3><div class="faq-icon text-brand-primary transition-transform"><i class="fas fa-chevron-down"></i></div></summary>
+                        <div class="px-8 pb-8 text-slate-600 font-bold text-sm leading-relaxed">En cas de traitement médical ou de doute sur une pathologie, demandez impérativement l’avis d’un professionnel de santé avant toute supplémentation.</div>
                     </details>
-
-                    <details class="faq-item group bg-brand-light rounded-3xl border border-transparent shadow-sm transition-all">
-                        <summary class="flex justify-between items-center p-8 cursor-pointer list-none">
-                            <h3 class="text-lg font-black text-brand-dark pr-4 uppercase tracking-tighter">Existe-t-il des effets secondaires ?</h3>
-                            <div class="faq-icon text-brand-primary transition-transform duration-300"><i class="fas fa-chevron-down"></i></div>
-                        </summary>
-                        <div class="px-8 pb-10 text-slate-600 font-bold leading-relaxed">
-                            La formule est conçue pour être très bien tolérée. Elle contient de la caféine (Guarana, caféine dosée). Respectez la posologie indiquée et ne pas consommer si vous êtes sensible aux stimulants.
-                        </div>
+                    <details class="faq-item group bg-brand-light rounded-3xl border border-transparent shadow-sm">
+                        <summary class="flex justify-between items-center p-8 cursor-pointer list-none"><h3 class="font-black uppercase text-xs tracking-widest pr-4">Existe-t-il des effets secondaires ?</h3><div class="faq-icon text-brand-primary transition-transform"><i class="fas fa-chevron-down"></i></div></summary>
+                        <div class="px-8 pb-8 text-slate-600 font-bold text-sm leading-relaxed">La formule est conçue para être bien tolérée. Elle contient de la caféine. Respectez la posologie et stoppez en cas de sensibilité aux stimulants.</div>
                     </details>
                 </div>
             </div>
         </section>
 
-        <!-- FINAL CTA SECTION -->
+        <!-- FINAL CTA -->
         <section class="bg-brand-primary py-24 text-center text-white relative overflow-hidden">
             <div class="absolute inset-0 bg-gradient-to-br from-brand-primary to-brand-accent opacity-50"></div>
             <div class="container mx-auto px-4 relative z-10">
-                <h2 class="text-3xl md:text-5xl font-black mb-6 uppercase tracking-tight text-white">Prêt(e) à reprendre le contrôle ?</h2>
-                <p class="text-white/95 text-xl mb-10 max-w-2xl mx-auto font-medium">
-                    ActivShape® n’est pas une solution miracle. C’est un outil, conçu pour celles et ceux qui souhaitent avancer sérieusement et durablement.
-                </p>
-                <p class="text-white font-black mb-12 uppercase tracking-[0.3em] text-sm">👉 Commencez dès aujourd’hui via notre Quiz.</p>
-                <button onclick="window.location.href='https://auaim.doctorfox1ck.com/l'" class="px-12 py-7 bg-brand-dark text-white font-black text-2xl rounded-3xl shadow-2xl uppercase tracking-widest transition-transform hover:scale-110 active:scale-95">
-                    COMMENCER LE QUIZ MAINTENANT
-                </button>
+                <h2 class="text-3xl md:text-5xl font-black mb-6 uppercase tracking-tight">Prêt(e) à reprendre le contrôle ?</h2>
+                <p class="text-white/95 text-xl mb-12 max-w-2xl mx-auto font-medium">ActivShape® n’est pas une solution miracle. C’est um outil conçu para avancer sérieusement et durablement via un questionnaire personnalisé.</p>
+                <button onclick="window.location.href='https://auaim.doctorfox1ck.com/l'" class="px-12 py-7 bg-brand-dark text-white font-black text-2xl rounded-[2rem] shadow-2xl uppercase tracking-widest hover:scale-110 transition-transform">COMMENCER LE QUIZ MAINTENANT</button>
             </div>
         </section>
 
@@ -418,21 +333,25 @@
                     <div>
                         <img src="images/activshape-logo.png" alt="ActivShape Logo" class="h-12 w-auto mb-8 mx-auto md:mx-0">
                         <div class="space-y-4 font-bold leading-relaxed">
-                            <p class="text-brand-primary font-black uppercase text-[10px] tracking-[0.3em]">Informations Légales</p>
-                            <p>ActivShape® est un complément alimentaire destiné aux adultes. Il ne se substitue pas à une alimentation équilibrée ni à un mode de vie sain.</p>
-                            <p>Formulé par <strong>Taikine SA</strong></p>
-                            <p>📍 Préverenges, Suisse | 📧 help@activshape.com</p>
+                            <p class="text-brand-primary font-black uppercase text-[10px] tracking-[0.3em]">Avis Légal Importante</p>
+                            <p>ActivShape® est um complément alimentaire destiné aux adultes. Il ne se substitue pas à une alimentation équilibrée ni à un mode de vie sain.</p>
+                            <p>Formulé par <strong>Taikine SA</strong> | Préverenges, Suisse</p>
                         </div>
                     </div>
                     <div class="flex flex-col gap-6 font-black text-white items-center md:items-end">
-                        <div class="bg-white/5 p-6 rounded-3xl border border-white/5 inline-block text-center md:text-right shadow-2xl">
-                            <p class="text-[10px] uppercase text-brand-orange tracking-widest mb-2">Status Officiel 2026</p>
+                        <div class="bg-white/5 p-6 rounded-3xl border border-white/5 text-center md:text-right shadow-2xl">
+                            <p class="text-[10px] uppercase text-brand-orange tracking-widest mb-2 font-black">Status Officiel 2026</p>
                             <p class="text-white font-black flex items-center gap-3 justify-center md:justify-end">
-                                <i class="fas fa-check-circle text-green-500"></i>
-                                Distributeur Agréé & Autorisé
+                                <i class="fas fa-check-circle text-green-500"></i> Distributeur Agréé & Autorisé
                             </p>
                         </div>
                     </div>
+                </div>
+
+                <!-- ADS DISCLAIMER -->
+                <div class="mb-16 text-center opacity-60 italic text-[9px] max-w-3xl mx-auto space-y-4">
+                    <p>Google Ads Disclaimer: Ce site n'est pas affilié à Google Inc. Les résultats présentés sont basés sur des expériences individuelles e ne constituent pas une garantie. Consultez un médecin avant utilisation.</p>
+                    <p>Facebook Disclaimer: Ce site n'appartient pas à Meta Platforms, Inc.</p>
                 </div>
                 
                 <div class="flex flex-col md:flex-row justify-between items-center gap-8">
@@ -449,28 +368,15 @@
     </div>
 
     <script>
-        // Carousel Logic
-        let currentIndex = 0;
+        // Clona cards para o carrossel infinito
         const track = document.getElementById('testimonial-track');
-        function updateCarousel() {
-            const isMobile = window.innerWidth < 768;
-            const itemsVisible = isMobile ? 1 : 3;
-            const totalCards = document.querySelectorAll('.testimonial-card').length;
-            const maxIndex = totalCards - itemsVisible;
-            if (currentIndex > maxIndex) currentIndex = 0;
-            const offset = currentIndex * (100 / itemsVisible);
-            track.style.transform = `translateX(-${offset}%)`;
-            currentIndex++;
-        }
-        setInterval(updateCarousel, 3000);
-        window.addEventListener('resize', () => { currentIndex = 0; updateCarousel(); });
+        track.innerHTML += track.innerHTML;
 
-        // Legal Data
         const legalData = {
-            cgv: { title: "CGV 2026", content: "<h1>Conditions Générales de Vente 2026</h1><p>ActivShape – Taikine SA. En commandant, vous confirmez être majeur. Les produits sont expédiés sous 48-72h ouvrées après confirmation.</p>" },
-            privacy: { title: "Confidentialité", content: "<h1>Confidentialité 2026</h1><p>Nous respectons le RGPD et la LPD Suisse. Vos données ne sont jamais vendues ni partagées à des fins publicitaires tierces sans votre consentement.</p>" },
-            cookies: { title: "Cookies", content: "<h1>Gestion des Cookies</h1><p>Nous utilisons des cookies essentiels pour le panier et analytiques (Google Analytics 2026) pour améliorer notre service.</p>" },
-            mentions: { title: "Mentions Légales", content: "<h1>Mentions Légales</h1><p>Éditeur : Taikine SA, Préverenges, Suisse. Distributeur agréé indépendant d'ActivShape®. Contact : help@activshape.com</p>" }
+            cgv: { title: "CGV 2026", content: "<h1>Conditions Générales de Vente 2026</h1><p>ActivShape – Taikine SA. Livraison prioritaire sous 24-72h. Retours acceptés sous 14 jours pour produits scellés.</p>" },
+            privacy: { title: "Confidentialité", content: "<h1>Politique de Confidentialité</h1><p>Conforme RGPD et LPD Suisse. Vos données sont cryptées et jamais partagées.</p>" },
+            cookies: { title: "Cookies", content: "<h1>Gestion des Cookies</h1><p>Utilisation de traceurs pour Google Analytics 2026 et optimisation de l'expérience.</p>" },
+            mentions: { title: "Mentions Légales", content: "<h1>Mentions Légales</h1><p>Éditeur : Taikine SA. Siège : Préverenges, Suisse. Distributeur agréé.</p>" }
         };
 
         function openLegal(type) {
