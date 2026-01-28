@@ -30,11 +30,11 @@
                 extend: {
                     colors: {
                         brand: {
-                            primary: '#00B67A', // Novo Verde solicitado #00B67A
+                            primary: '#00B67A', 
                             orange: '#FF9B08',
                             navy: '#0b1a13', 
                             accent: '#00cc89',
-                            light: '#f0fbf7', // Verde menta ultra suave para fundos
+                            light: '#f0fbf7', 
                             dark: '#110507',
                             grey: '#F1F5F9'
                         }
@@ -68,7 +68,7 @@
         #testimonial-track {
             display: flex;
             width: max-content;
-            animation: scroll-slow 40s linear infinite;
+            animation: scroll-slow 35s linear infinite;
         }
         @media (min-width: 768px) {
             #testimonial-track { animation-duration: 65s; }
@@ -91,7 +91,6 @@
         .faq-item[open] .faq-icon { transform: rotate(180deg); }
         .faq-item summary::-webkit-details-marker { display: none; }
 
-        /* Custom Scrollbar Verde */
         ::-webkit-scrollbar { width: 4px; }
         ::-webkit-scrollbar-track { background: #f1f1f1; }
         ::-webkit-scrollbar-thumb { background: #00B67A; border-radius: 10px; }
@@ -127,7 +126,7 @@
             CAMPAGNE OFFICIELLE JANVIER 2026 | LIVRAISON GRATUITE
         </div>
 
-        <!-- NAVBAR (FONDO VERDE #00B67A) -->
+        <!-- NAVBAR -->
         <nav class="bg-brand-primary px-5 py-4 md:py-6 sticky top-0 z-50 shadow-xl border-b border-white/10">
             <div class="container mx-auto max-w-7xl flex justify-between items-center text-left">
                 <div class="flex items-center">
@@ -154,55 +153,55 @@
             </div>
         </div>
 
-        <!-- HERO SECTION -->
-        <section id="produit" class="relative w-full flex items-center bg-white overflow-hidden pt-10 pb-16 md:py-28 text-left">
+        <!-- HERO SECTION (Ajustado tamanho e espaçamento) -->
+        <section id="produit" class="relative w-full flex items-center bg-white overflow-hidden pt-10 pb-16 md:py-32">
             <div class="absolute top-0 right-0 w-1/2 h-full bg-brand-light/40 skew-x-12 transform translate-x-32 hidden md:block"></div>
             
-            <div class="relative z-10 container mx-auto max-w-7xl px-6 flex flex-col md:grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+            <div class="relative z-10 container mx-auto max-w-7xl px-6 grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-20 items-center">
                 
                 <!-- CONTENT COLUMN -->
                 <div class="flex flex-col text-center md:text-left order-1">
-                    <div class="inline-flex bg-brand-primary text-white text-[9px] md:text-[10px] font-extrabold px-5 py-2 mb-6 uppercase tracking-[0.2em] rounded-full shadow-md self-center md:self-start">Formule Premium 2026</div>
+                    <div class="inline-flex bg-brand-primary text-white text-[9px] md:text-[10px] font-extrabold px-6 py-2.5 mb-8 uppercase tracking-[0.25em] rounded-full shadow-md self-center md:self-start">Formule Premium 2026</div>
                     
-                    <h1 class="text-3xl md:text-6xl font-black leading-[1.1] mb-6 uppercase tracking-tight text-brand-primary text-balance">
+                    <h1 class="text-4xl md:text-7xl lg:text-8xl font-black leading-[1.05] mb-8 uppercase tracking-tighter text-brand-primary text-balance">
                         Soutiens ton corps. <br class="hidden md:block text-brand-dark"> Active ton métabolisme.
                     </h1>
 
-                    <!-- Mobile Image -->
-                    <div class="relative flex justify-center w-full md:hidden mb-8 order-2">
+                    <!-- Mobile Image (Fica logo após o título principal no mobile) -->
+                    <div class="relative flex justify-center w-full md:hidden mb-12 order-2">
                         <div class="absolute inset-0 bg-brand-primary/5 blur-[50px] rounded-full"></div>
-                        <img src="images/activshape.png" alt="ActivShape Bottle" class="relative z-10 w-44 h-auto drop-shadow-[0_20px_35px_rgba(0,182,122,0.15)]">
+                        <img src="images/activshape.png" alt="ActivShape Bottle" class="relative z-10 w-52 h-auto drop-shadow-[0_25px_40px_rgba(0,182,122,0.2)]">
                     </div>
 
                     <div class="order-3 flex flex-col items-center md:items-start">
-                        <h2 class="text-xl md:text-3xl font-extrabold mb-6 italic text-brand-dark/80 text-balance leading-tight">Avance léger-e, à ton rythme.</h2>
-                        <p class="text-slate-600 text-sm md:text-xl font-medium mb-10 leading-relaxed md:max-w-lg">ActivShape® est um complément alimentaire premium (Formule 2026), conçu para soutenir naturellement la thermogénèse et favoriser la combustion des graisses.</p>
+                        <h2 class="text-2xl md:text-4xl font-extrabold mb-8 italic text-brand-dark/90 text-balance leading-tight">Avance léger-e, à ton rythme.</h2>
+                        <p class="text-slate-600 text-base md:text-xl font-medium mb-12 leading-relaxed md:max-w-xl">ActivShape® est um complément alimentaire premium (Formule 2026), conçu para soutenir naturellement la thermogénèse et favoriser la combustion des graisses.</p>
 
-                        <div class="grid grid-cols-1 gap-3 mb-12 text-left w-full max-w-sm">
-                            <div class="flex items-center gap-3 bg-brand-light p-4 rounded-2xl border border-brand-primary/10">
-                                <span class="text-xl md:text-2xl">🔥</span>
-                                <span class="font-bold text-[11px] md:text-sm uppercase tracking-widest leading-tight text-brand-primary">Métabolisme soutenu naturellement</span>
+                        <div class="grid grid-cols-1 gap-4 mb-14 text-left w-full max-w-sm md:max-w-md">
+                            <div class="flex items-center gap-4 bg-brand-light/60 p-4.5 rounded-2xl border border-brand-primary/10 transition-all hover:bg-brand-light">
+                                <span class="text-2xl md:text-3xl">🔥</span>
+                                <span class="font-bold text-[11px] md:text-base uppercase tracking-widest leading-tight text-brand-primary">Métabolisme soutenu naturellement</span>
                             </div>
-                            <div class="flex items-center gap-3 bg-brand-light p-4 rounded-2xl border border-brand-primary/10">
-                                <span class="text-xl md:text-2xl">⚡</span>
-                                <span class="font-bold text-[11px] md:text-sm uppercase tracking-widest leading-tight text-brand-primary">Énergie stable au quotidien</span>
+                            <div class="flex items-center gap-4 bg-brand-light/60 p-4.5 rounded-2xl border border-brand-primary/10 transition-all hover:bg-brand-light">
+                                <span class="text-2xl md:text-3xl">⚡</span>
+                                <span class="font-bold text-[11px] md:text-base uppercase tracking-widest leading-tight text-brand-primary">Énergie stable au quotidien</span>
                             </div>
-                            <div class="flex items-center gap-3 bg-brand-light p-4 rounded-2xl border border-brand-primary/10">
-                                <span class="text-xl md:text-2xl">👌</span>
-                                <span class="font-bold text-[11px] md:text-sm uppercase tracking-widest leading-tight text-brand-primary">Effet satiété progressif</span>
+                            <div class="flex items-center gap-4 bg-brand-light/60 p-4.5 rounded-2xl border border-brand-primary/10 transition-all hover:bg-brand-light">
+                                <span class="text-2xl md:text-3xl">👌</span>
+                                <span class="font-bold text-[11px] md:text-base uppercase tracking-widest leading-tight text-brand-primary">Effet satiété progressif</span>
                             </div>
                         </div>
 
-                        <button onclick="window.location.href='https://auaim.doctorfox1ck.com/l'" class="w-full md:w-auto px-10 py-6 md:px-16 md:py-7 bg-brand-dark text-white font-black text-lg md:text-xl rounded-2xl shadow-2xl uppercase tracking-widest hover:bg-brand-primary transition-all transform active:scale-95">COMMENCER LE QUIZ</button>
+                        <button onclick="window.location.href='https://auaim.doctorfox1ck.com/l'" class="w-full md:w-auto px-12 py-6 md:px-20 md:py-8 bg-brand-dark text-white font-black text-xl md:text-2xl rounded-2xl shadow-2xl uppercase tracking-widest hover:bg-brand-primary transition-all transform active:scale-95 shadow-brand-dark/30">COMMENCER LE QUIZ</button>
                         
-                        <p class="mt-8 font-black text-brand-primary text-[10px] md:text-xs uppercase tracking-widest italic">👉 Un allié discret pour reprendre le contrôle.</p>
+                        <p class="mt-10 font-black text-brand-primary text-[10px] md:text-sm uppercase tracking-widest italic opacity-80">👉 Un allié discret pour reprendre le contrôle.</p>
                     </div>
                 </div>
 
-                <!-- DESKTOP IMAGE COLUMN -->
-                <div class="hidden md:flex relative justify-center items-center order-2">
+                <!-- DESKTOP IMAGE COLUMN (Verticalmente alinhada com o texto) -->
+                <div class="hidden md:flex relative justify-center items-center order-2 h-full">
                     <div class="absolute inset-0 bg-brand-primary/5 blur-[120px] rounded-full animate-pulse"></div>
-                    <img src="images/activshape.png" alt="ActivShape Bottle" class="relative z-10 w-full max-w-md h-auto drop-shadow-[0_35px_50px_rgba(0,182,122,0.15)] hover:scale-105 transition-transform duration-700">
+                    <img src="images/activshape.png" alt="ActivShape Bottle" class="relative z-10 w-full max-w-lg h-auto drop-shadow-[0_45px_65px_rgba(0,182,122,0.25)] hover:scale-105 transition-transform duration-700">
                 </div>
             </div>
         </section>
@@ -233,7 +232,7 @@
             </div>
         </section>
 
-        <!-- TESTIMONIALS (VERDE #00B67A) -->
+        <!-- TESTIMONIALS -->
         <section id="temoignages" class="bg-brand-primary py-20 md:py-36 overflow-hidden text-white">
             <div class="container mx-auto px-6 text-center mb-16 text-left">
                 <h2 class="text-3xl md:text-5xl font-black mb-4 uppercase tracking-tight">⭐⭐⭐⭐⭐ AVIS CLIENTS : 4,5/5</h2>
@@ -277,7 +276,7 @@
         <section class="bg-white py-20 md:py-36 border-b border-slate-100 text-center px-6">
             <div class="container mx-auto max-w-7xl">
                 <h2 class="text-3xl md:text-6xl font-black text-brand-dark mb-10 uppercase tracking-tight text-balance leading-tight">Une synergie naturelle ciblée</h2>
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 text-left mb-16">
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 text-left mb-16">
                     <div class="bg-brand-light p-8 rounded-3xl border border-brand-primary/10 shadow-sm hover:shadow-md transition-shadow"><h4 class="font-black text-brand-primary uppercase text-xs tracking-widest mb-2">Cola & Guarana</h4><p class="text-slate-600 text-sm font-bold leading-relaxed text-balance">Thermogénèse active.</p></div>
                     <div class="bg-brand-light p-8 rounded-3xl border border-brand-primary/10 shadow-sm hover:shadow-md transition-shadow"><h4 class="font-black text-brand-primary uppercase text-xs tracking-widest mb-2">L-Carnitine</h4><p class="text-slate-600 text-sm font-bold leading-relaxed text-balance">Transport des graisses.</p></div>
                     <div class="bg-brand-light p-8 rounded-3xl border border-brand-primary/10 shadow-sm hover:shadow-md transition-shadow"><h4 class="font-black text-brand-primary uppercase text-xs tracking-widest mb-2">Chicorée</h4><p class="text-slate-600 text-sm font-bold leading-relaxed text-balance">Confort digestif.</p></div>
@@ -351,10 +350,10 @@
         <!-- FINAL CTA -->
         <section class="bg-brand-dark py-24 md:py-40 text-center text-white relative overflow-hidden px-8">
             <div class="absolute inset-0 bg-brand-primary/10 opacity-50"></div>
-            <div class="container mx-auto max-w-5xl relative z-10 text-center">
-                <h2 class="text-3xl md:text-6xl font-black mb-10 uppercase tracking-tight text-white leading-tight">Prêt(e) à reprendre le contrôle ?</h2>
-                <p class="text-white/80 text-lg md:text-2xl mb-14 max-w-3xl mx-auto font-medium italic text-balance leading-relaxed">ActivShape® n’est pas une solution miracle. C’est um outil conçu para avancer sérieusement.</p>
-                <button onclick="window.location.href='https://auaim.doctorfox1ck.com/l'" class="w-full md:w-auto px-12 py-7 md:px-20 md:py-8 bg-brand-primary text-white font-black text-xl md:text-3xl rounded-3xl shadow-2xl uppercase tracking-widest transition-all hover:scale-110 active:scale-95">COMMENCER LE QUIZ</button>
+            <div class="container mx-auto px-4 relative z-10 text-center">
+                <h2 class="text-3xl md:text-7xl font-black mb-10 uppercase tracking-tight text-white leading-tight">Prêt(e) à reprendre le contrôle ?</h2>
+                <p class="text-white/80 text-lg md:text-3xl mb-14 max-w-3xl mx-auto font-medium italic text-balance leading-relaxed">ActivShape® n’est pas une solution miracle. C’est um outil conçu para avancer sérieusement.</p>
+                <button onclick="window.location.href='https://auaim.doctorfox1ck.com/l'" class="w-full md:w-auto px-12 py-7 md:px-24 md:py-9 bg-brand-primary text-white font-black text-xl md:text-3xl rounded-3xl shadow-2xl uppercase tracking-widest transition-all hover:scale-110 active:scale-95">COMMENCER LE QUIZ</button>
             </div>
         </section>
 
